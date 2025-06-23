@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Админ-гайд | CleanupAlmatyBot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'about_site/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="site-logo"><a href="{% url 'about_site:home' %}">CleanupAlmatyBot.</a></div>
+            <ul class="site-menu d-none d-md-flex">
+                <a href="{% url 'about_site:home' %}">Главная</a>
+                <a href="{% url 'about_site:services' %}">Услуги</a>
+                <a href="{% url 'about_site:instruction' %}">Инструкция</a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <section class="section" style="margin-top: 100px;" id="admin-guide">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Инструкция для администратора</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="common-card">
+                        <h3>🔐 Авторизация</h3>
+                        <p>Администратор входит в систему через Telegram с правами, которые заранее установлены при регистрации.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="common-card">
+                        <h3>📋 Управление пользователями</h3>
+                        <p>Просматривайте список волонтёров и организаторов, проверяйте их данные, блокируйте или подтверждайте при необходимости.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="common-card">
+                        <h3>🛠 Модерация мероприятий</h3>
+                        <p>Вы можете одобрять или отклонять созданные события, редактировать их описание и следить за количеством участников.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="common-card">
+                        <h3>📊 Аналитика</h3>
+                        <p>Доступ к общей статистике: сколько мероприятий прошло, сколько волонтёров участвовало, какие места самые активные.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="alma-footer-manual">
+        <div class="footer-shapes">
+            <div class="red-corner"></div>
+            <div class="blue-corner"></div>
+        </div>
+        <div class="footer-content">
+            <img src="{% static 'about_site/images/alma-logo.png' %}" alt="AlmaU Logo" class="alma-logo">
+            <p>&copy; 2025 CleanupAlmatyBot</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{% static 'about_site/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'about_site/js/aos.js' %}"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+</body>
+
+</html>

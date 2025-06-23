@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Наши услуги — CleanupAlmatyBot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'about_site/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="site-logo"><a href="index.html">CleanupAlmatyBot.</a></div>
+            <ul class="site-menu d-none d-md-flex">
+                <a href="{% url 'about_site:home' %}">Главная</a>
+                <a href="{% url 'about_site:services' %}">Услуги</a>
+                <a href="{% url 'about_site:instruction' %}">Инструкция</a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Услуги -->
+    <section class="section" style="margin-top: 100px;" id="our-services">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-4 text-center">Наши услуги</h2>
+            <p class="text-center mb-5">
+                Мы разработали удобный TelegramBot, разделённого на три роли для волонтёров, организаторов и администраторов. Каждая из этих ролей даёт пользователю свои возможности для комфортной работы с мероприятиями по благоустройству города.
+            </p>
+
+            <div class="row">
+
+                <!-- Услуга 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <h3 class="mb-2">Путь админа</h3>
+                        <p>
+                            Администратор управляет всеми процессами в боте — проверяет достоверность информации, решает вопросы с участниками, следит за актуальностью волонтёрских мероприятий и вносит изменения при необходимости.
+                        </p>
+                        <p>
+                            Также администратор может видеть подробную аналитику активности, управлять доступами для организаторов, а при обнаружении нарушений оперативно приостанавливать сомнительные мероприятия.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Услуга 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <h3 class="mb-2">Путь волонтёра</h3>
+                        <p>
+                            Волонтёры проходят простую регистрацию в боте, после чего получают доступ к актуальным акциям по благоустройству. Бот показывает место проведения, время начала, описание мероприятия и количество свободных мест для участия.
+                        </p>
+                        <p>
+                            Участники смогут записываться на интересующие их мероприятия, получать уведомления и видеть свои предыдущие достижения для личной мотивации.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Услуга 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <h3 class="mb-2">Путь организатора</h3>
+                        <p>
+                            Организаторы создают свои собственные волонтёрские мероприятия с указанием времени, даты, места проведения и необходимого числа участников. Также они получают доступ ко всем профилям волонтёров, которые подали заявки, для быстрой коммуникации.
+                        </p>
+                        <p>
+                            Организаторы смогут управлять статусами мероприятий — запускать, приостанавливать или завершать их. Всё это экономит время при организации крупных событий.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="alma-footer-manual">
+        <div class="footer-shapes">
+            <div class="red-corner"></div>
+            <div class="blue-corner"></div>
+        </div>
+        <div class="footer-content">
+            <img src="{% static 'about_site/images/alma-logo.png' %}" alt="AlmaU Logo" class="alma-logo">
+            <p>&copy; 2025 CleanupAlmatyBot</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{% static 'about_site/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'about_site/js/aos.js' %}"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+</body>
+
+</html>

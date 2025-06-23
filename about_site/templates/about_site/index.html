@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>CleanupAlmatyBot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'about_site/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'about_site/css/bootstrap.min.css' %}">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="site-logo"><a href="{% url 'about_site:home' %}">CleanupAlmatyBot.</a></div>
+            <ul class="site-menu d-none d-md-flex">
+                <a href="{% url 'about_site:home' %}">Главная</a>
+                <a href="{% url 'about_site:services' %}">Услуги</a>
+                <a href="{% url 'about_site:instruction' %}">Инструкция</a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container" data-aos="fade-up">
+            <h1>Мы делаем город лучше</h1>
+            <p>С помощью технологий и вашего участия</p>
+            <a href="https://t.me/cleanupalmaty_bot" class="btn-primary">Наш бот</a>
+        </div>
+    </section>
+
+    <!-- Почему мы? -->
+    <section class="section" id="features">
+        <div class="container" data-aos="fade-up">
+            <h2 class="mb-5 text-center">Почему мы?</h2>
+            <div class="row why-we-box">
+
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <p><strong>Наш бот улучшает инфраструктуру университетов.</strong> С помощью TelegramBot студенты и сотрудники университета всегда в курсе актуальных волонтёрских акций, а организация мероприятий становится прозрачной и удобной для всех участников.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <p><strong>Это решение очень нужно крупным организациям.</strong> Большие компании и университеты смогут использовать нашего бота для управления волонтёрами без лишней бюрократии — участники легко записываются на события, а администраторы
+                            управляют их проведением в реальном времени.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="common-card">
+                        <p><strong>Бот упрощает поиск организаторов.</strong> Теперь нет необходимости искать контакты вручную — всё собрано в одном месте для комфортного взаимодействия между волонтёрами и организаторами.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="alma-footer-manual">
+        <div class="footer-shapes">
+            <div class="red-corner"></div>
+            <div class="blue-corner"></div>
+        </div>
+        <div class="footer-content">
+            <img src="{% static 'about_site/images/alma-logo.png' %}" alt="AlmaU Logo" class="alma-logo">
+            <p>&copy; 2025 CleanupAlmatyBot</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{% static 'about_site/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'about_site/js/aos.js' %}"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+</body>
+
+</html>

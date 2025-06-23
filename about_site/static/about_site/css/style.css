@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+/* === AlmaU Brand Variables === */
+:root {
+  --alma-red: #E30613;
+  --alma-blue: #003865; /* Pantone 541 C approximation */
+  --alma-gray: #EDEDED;
+  --alma-white: #FFFFFF;
+}
+
+/* === Общие стили === */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background: var(--alma-white);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  color: var(--alma-blue);
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* === Header === */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--alma-blue);
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+
+header .site-logo a {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--alma-white);
+  text-decoration: none;
+}
+
+.site-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.site-menu a {
+  color: var(--alma-white);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 600;
+}
+
+.site-menu a:hover,
+.site-menu a.active {
+  border-color: var(--alma-white);
+  transform: scale(1.1);
+  text-shadow: 0 2px 8px rgba(0,32,91,0.3);
+}
+
+/* === Кнопка === */
+.btn-primary {
+  background-color: var(--alma-red);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--alma-blue);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 32, 91, 0.3);
+}
+
+/* === Секции === */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+/* === Герой-секция === */
+.hero {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  background: var(--alma-white);
+  color: var(--alma-blue);
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--alma-blue);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--alma-blue);
+}
+
+/* === Универсальный стиль карточек === */
+.common-card {
+  display: block;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 2px solid var(--alma-blue);
+  text-align: center;
+  transition: 0.3s ease;
+  color: inherit;
+  font-weight: 600;
+  height: 100%;
+}
+
+.common-card:hover {
+  transform: scale(1.03);
+  border-color: var(--alma-red);
+  box-shadow: 0 8px 20px rgba(227,6,19,0.3);
+  text-decoration: none;
+}
+
+.common-card h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--alma-blue);
+}
+
+.common-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* === Почему мы? обёртка === */
+.why-we-box {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* === Footer === */
+footer {
+  background: var(--alma-red);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+.alma-footer-manual {
+  position: relative;
+  background-color: var(--alma-white);
+  overflow: hidden;
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  color: var(--alma-blue);
+}
+
+.footer-shapes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+}
+
+.red-corner {
+  position: absolute;
+  left: -100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background: var(--alma-red);
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.blue-corner {
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  background: var(--alma-blue);
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-content p {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.alma-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+}
